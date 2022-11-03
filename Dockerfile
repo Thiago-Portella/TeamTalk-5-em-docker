@@ -9,11 +9,9 @@ RUN wget https://bearware.dk/teamtalk/v5.11/teamtalk-v5.11-ubuntu22-x86_64.tgz &
     rm -rf teamtalk-v5.11-ubuntu22-x86_64 && \
     chmod +x server/tt5srv
 
-COPY tt5srv.xml server/tt5srv.xml
-
 EXPOSE 10333/udp 10333/udp
 EXPOSE 10333/tcp 10333/tcp
 
 WORKDIR /server
 
-CMD ./tt5srv -nd
+CMD ./tt5srv -wd ./data -nd
