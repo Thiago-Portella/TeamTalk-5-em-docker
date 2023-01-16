@@ -1,4 +1,4 @@
-name: Deploy
+vvname: Deploy
  
 on: [push]
  
@@ -30,4 +30,7 @@ jobs:
         PASSWORD: ${{ secrets.SSHKEY }}
         script: |
             cd ./repo/TeamTalk-5-em-docker/
-            ls
+            docker stop ttda
+            docker rm ttda
+            docker build -t ttd .
+            docker run --name ttda --restart=on-failure -dv /root/repo/comTT:/server/data -p 10333:10333 -p 10333:10333/udp ttd
