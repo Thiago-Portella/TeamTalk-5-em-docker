@@ -1,4 +1,4 @@
-name: Deploy
+    name: Deploy
  
 on: [push]
  
@@ -28,5 +28,4 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         PASSWORD: ${{ secrets.SSHKEY }}
-        script: "cd ./repo/TeamTalk-5-em-docker/ \
-        ls"
+        script: "cd ./repo/TeamTalk-5-em-docker/: ls"
