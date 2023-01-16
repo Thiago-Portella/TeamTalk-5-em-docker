@@ -1,4 +1,4 @@
-vvname: Deploy
+name: Deploy
  
 on: [push]
  
