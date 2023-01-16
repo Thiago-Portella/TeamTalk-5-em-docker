@@ -19,7 +19,7 @@ jobs:
         PASSWORD: ${{ secrets.SSHKEY }}
       with:
         source: "."
-        target: "/root/repo/translate-Telegram-bot"
+        target: "/root/repo/TeamTalk-5-em-docker"
  
     - name: Executing remote command
       uses: appleboy/ssh-action@master
