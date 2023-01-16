@@ -28,4 +28,8 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         PASSWORD: ${{ secrets.SSHKEY }}
-        script: ls ./repo/TeamTalk-5-em-docker/
+        script: cd ./repo/TeamTalk-5-em-docker/ \
+        docker stop ttda \
+        docker rm ttda \
+        docker build -t ttd . \
+        docker run --name ttda --restart=on-failure -dv /root/repo/comTT:/server/data -p 10333:10333 -p 10333:10333/udp ttd
