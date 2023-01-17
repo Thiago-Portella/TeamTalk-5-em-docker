@@ -22,7 +22,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        PASSWORD: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.SSHKEY }}
       with:
         source: "."
         target: "/root/repo/TeamTalk-5-em-docker"
@@ -33,7 +33,7 @@ jobs:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
-        PASSWORD: ${{ secrets.SSHKEY }}
+        KEY: ${{ secrets.SSHKEY }}
         script: |
             cd ./repo/TeamTalk-5-em-docker/
             docker stop ttda
