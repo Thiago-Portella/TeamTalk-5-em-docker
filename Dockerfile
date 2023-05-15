@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 RUN apt update && apt install wget -y
 
 # Baixe e descompacte o TeamTalk
-RUN wget https://bearware.dk/teamtalk/v5.12/teamtalk-v5.12-ubuntu22-x86_64.tgz && \
+RUN wget https://bearware.dk/teamtalk/v5.13/teamtalk-v5.13-ubuntu22-x86_64.tgz && \
     gunzip teamtalk-v5.12-ubuntu22-x86_64.tgz && \
     tar xf teamtalk-v5.12-ubuntu22-x86_64.tar && \
     rm teamtalk-v5.12-ubuntu22-x86_64.tar
