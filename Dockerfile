@@ -4,13 +4,13 @@ FROM ubuntu:22.04
 RUN apt update && apt install wget -y
 
 # Baixe e descompacte o TeamTalk
-RUN wget https://bearware.dk/teamtalk/v5.13/teamtalk-v5.13-ubuntu22-x86_64.tgz && \
-    gunzip teamtalk-v5.13-ubuntu22-x86_64.tgz && \
-    tar xf teamtalk-v5.13-ubuntu22-x86_64.tar && \
-    rm teamtalk-v5.13-ubuntu22-x86_64.tar
+RUN wget https://bearware.dk/teamtalk/v5.14/teamtalk-v5.14-ubuntu22-x86_64.tgz && \
+    gunzip teamtalk-v5.14-ubuntu22-x86_64.tgz && \
+    tar xf teamtalk-v5.14-ubuntu22-x86_64.tar && \
+    rm teamtalk-v5.14-ubuntu22-x86_64.tar
 
 # Copie o servidor para o diretório corrente e remova os arquivos desnecessários
-RUN cp -r teamtalk-v5.13-ubuntu22-x86_64/server . && rm -rf teamtalk-v5.13-ubuntu22-x86_64
+RUN cp -r teamtalk-v5.14-ubuntu22-x86_64/server . && rm -rf teamtalk-v5.14-ubuntu22-x86_64
 
 # Defina as portas TCP e UDP 10333 como expostas
 EXPOSE 10333/tcp 10333/udp
