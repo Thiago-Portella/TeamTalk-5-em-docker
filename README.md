@@ -28,7 +28,7 @@ Para usar a action, fassa o seguinte.
 
 Os segredos a serem criados, serão os seguintes.
 
-- HOST: o ip ou domínio da vps.
-- PORT: a porta ssh da vps.
-- SSHKEY: o texto que tem dentro da sua chave key ssh da vps. não tem como conectar pela senha.
-- USERNAME: o usuário ssh da vps.
+- `HOST`: o ip ou domínio da vps.
+- `PORT`: a porta ssh da vps.
+- `SSHKEY`: o texto que tem dentro da sua chave key ssh da vps. não tem como conectar pela senha.
+- `USERNAME`: o usuário ssh da vps.
