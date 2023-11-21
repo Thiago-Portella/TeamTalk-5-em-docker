@@ -18,6 +18,8 @@ EXPOSE 10333/tcp 10333/udp
 # Defina o diretório de trabalho como o diretório do servidor
 WORKDIR /server
 
-# Configure o servidor para salvar os dados em um diretório chamado "data"
+# Crie o diretório "data"
+RUN mkdir data
+
 # e desative a criação de um novo usuário administrador
 CMD ./tt5srv -wd ./data -nd
