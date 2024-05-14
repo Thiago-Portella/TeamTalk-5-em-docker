@@ -7,15 +7,18 @@ Se o arquivo tt5srv.xml não estiver la, o TeanTalk vai criar um padrão.
 Recomendo você criar pelomenos um inicial.
 
  Entre na pasta desse repositório e builda a imagem, com o comando
-`docker build -t ttd` .
+`docker-compose build` .
 Depois, basta executar com o comando
-```docker run -dv /home/ubuntu/repo/comTT:/server/data -p 10333:10333 -p 10333:10333/udp ttd```
-Se caso você quiser que a imagem execute ao iniciar o systema, use esse comando:
-```docker run --restart=on-failure -dv /home/ubuntu/repo/comTT:/server/data -p 10333:10333 -p 10333:10333/udp ttd```
+
+```bash
+docker-compose up -d
+```
+
 ## Avisos
-Se caso as portas que você definio no arquivo tt5srv.xml for diferente da padrão, 10333, você tem que mudar no comando tanbén, por que se não o docker não vai mapear a porta para a máquina host.
+Se caso as portas que você definio no arquivo tt5srv.xml for diferente da padrão, 10333, você tem que mudar no docker-compose tanbén, por que se não o docker não vai mapear a porta para a máquina host.
 
 No linux, pelomenos no ubuntu, todos esses comandos terão que ser executados como sudo.
+
 ## Workflow
 Esse repositório inclui uma pasta `.github`, para vocè subir sua imagem para uma vps diretamente do github, com github action.
 
