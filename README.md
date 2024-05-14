@@ -14,6 +14,11 @@ Depois, basta executar com o comando
 docker-compose up -d
 ```
 
+## atualizando
+Eu vou fazer o possível pra manter esse repositório atualizado com o TT oficial. mas se caso queira atualizar por conta, basta editar as variáveis `FILE_NAME` e `URL` no arquivo docker-compose.yml.
+
+Não coloque a extenção do arquivo na variável `FILE_NAME`, pois o dockerfile concidera que o nome não vai vir com extenção.
+
 ## Avisos
 Se caso as portas que você definio no arquivo tt5srv.xml for diferente da padrão, 10333, você tem que mudar no docker-compose tanbén, por que se não o docker não vai mapear a porta para a máquina host.
 
