@@ -35,6 +35,7 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
         script: |
             cd ./repo/TeamTalk-5-em-docker/
+            docker compose build
             docker compose down
             docker compose up -d
             docker compose logs
