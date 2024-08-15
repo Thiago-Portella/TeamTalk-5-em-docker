@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        FILE_NAME: "teamtalk-v5.16-ubuntu22-x86_64"
-        URL: "https://bearware.dk/teamtalk/v5.16/teamtalk-v5.16-ubuntu22-x86_64.tgz"
+        FILE_NAME: "teamtalk-v5.17-ubuntu22-x86_64"
+        URL: "https://bearware.dk/teamtalk/v5.17/teamtalk-v5.17-ubuntu22-x86_64.tgz"
     container_name: ttda
     restart: on-failure
     ports:
