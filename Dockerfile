@@ -4,7 +4,8 @@ ARG FILE_NAME=teamtalk-v5.17-ubuntu22-x86_64
 ARG URL=https://bearware.dk/teamtalk/v5.17/teamtalk-v5.17-ubuntu22-x86_64.tgz
 
 # Atualize o gerenciador de pacotes e instale o wget
-RUN apt update && apt install wget -y
+RUN apt update && apt install wget -y && \
+apt clean
 
 # Baixe e descompacte o TeamTalk
 RUN wget ${URL} && \
@@ -21,8 +22,11 @@ EXPOSE 10333/tcp 10333/udp
 # Defina o diretório de trabalho como o diretório do servidor
 WORKDIR /server
 
+RUN useradd -r -d /server -s /usr/sbin/nologin teamtalk && \
+    chown -R teamtalk:teamtalk /server
+USER teamtalk
+
 # Crie o diretório "data"
 RUN mkdir data
 
-# e desative a criação de um novo usuário administrador
 CMD ./tt5srv -wd ./data -nd
