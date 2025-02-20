@@ -41,7 +41,7 @@ jobs:
         port: ${{ secrets.PORT }}
         password: ${{ secrets.SSHKEY }}
         source: "."
-        target: "/root/repo/TeamTalk-5-em-docker"
+        target: "/deployer/repo/TeamTalk-5-em-docker"
 
     - name: Executing remote command im vps
       uses: appleboy/ssh-action@master
