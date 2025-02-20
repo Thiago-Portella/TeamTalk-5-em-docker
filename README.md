@@ -40,3 +40,4 @@ Os segredos a serem criados, serão os seguintes.
 - `PORT`: a porta ssh da vps.
 - `SSHKEY`: o texto que tem dentro da sua chave key ssh da vps. não tem como conectar pela senha.
 - `USERNAME`: o usuário ssh da vps.
+
