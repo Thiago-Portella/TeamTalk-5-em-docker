@@ -14,7 +14,7 @@ services:
       - "10333:10333"
       - "10333:10333/udp"
     volumes:
-      - /home/deployer/repo/comTT:/server/data
+      - /home/deployer/comTT:/server/data
     networks:
       - teamtalk-net
 
