@@ -39,7 +39,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.SSHKEY }}
+        password: ${{ secrets.SSHKEY }}
         source: "."
         target: "/root/repo/TeamTalk-5-em-docker"
 
@@ -49,7 +49,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.SSHKEY }}
+        password: ${{ secrets.SSHKEY }}
         script: |
             cd ./repo/TeamTalk-5-em-docker/
             docker compose build
